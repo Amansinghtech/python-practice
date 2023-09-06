@@ -11,3 +11,10 @@ class Book:
 
     def __str__(self) -> str:
         return f"{self.id}.) Name: {self.name} Author: {self.author} Price: {self.price}"
+
+    def __iter__(self):
+
+        yield self.id
+        yield self.name
+        yield self.author
+        yield self.price
